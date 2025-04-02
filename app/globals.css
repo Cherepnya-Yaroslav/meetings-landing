@@ -53,16 +53,19 @@ main {
   z-index: 10;
 }
 
+
 .landing-content h1 {
   color: var(--text-color);
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 700;  
+  font-style: italic;
 }
 
 .landing-content h2 {
   color: var(--accent-color);
   font-size: 3rem;
   font-weight: 700;
+  font-style: italic;
   margin-bottom: 0.5rem;
 }
 
@@ -106,11 +109,12 @@ main {
   padding: 1rem 3rem;
   border-radius: 9999px;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 700;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  box-shadow: 0 4px 6px var(--shadow-color);
+  box-shadow: 0 6px 8px var(--shadow-color);
 }
 
 .cta-button:hover {
