@@ -1,0 +1,546 @@
+/* Базовые стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #151823; /* Темно-синий фон */
+  --primary-hover: #1E2231; /* Чуть светлее основного */
+  --accent-color: #C090B0; /* Розово-фиолетовый */
+  --accent-hover: #D4A4C4; /* Светлее акцентного */
+  --secondary-color: #1A1D2A; /* Чуть светлее для карточек */
+  --text-color: #FFFFFF; /* Белый для основного текста */
+  --secondary-text: #B4B4B4; /* Серый для вторичного текста */
+  --background-color: #151823;
+  --white: #FFFFFF;
+  --footer-bg: #1A1D2A;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  color: var(--text-color);
+  background: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Стили для главной страницы */
+.landing-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--primary-color);
+  position: relative;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 50%;
+  z-index: 10;
+}
+
+.landing-content h1 {
+  color: var(--text-color);
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.landing-content h2 {
+  color: var(--accent-color);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.landing-content h3 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.bullet-points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.bullet-point {
+  display: flex;
+  align-items: center;
+}
+
+.bullet-point span {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
+.bullet-point p {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.landing-content > p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 1rem 3rem;
+  border-radius: 9999px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.cta-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.landing-image {
+  position: relative;
+  width: 45%;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.landing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.landing-footer {
+  width: 100%;
+  background-color: var(--footer-bg);
+  padding: 1.5rem 0;
+  z-index: 20;
+}
+
+.footer-content {
+  text-align: center;
+  color: var(--white);
+  font-size: 0.875rem;
+}
+
+.footer-content p {
+  margin-bottom: 0.25rem;
+}
+
+/* Стили для опросника */
+.survey-container {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+.survey-card {
+  max-width: 42rem;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--accent-color);
+  border-radius: 9999px;
+  transition: width 0.3s;
+}
+
+.question-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.question-card {
+  border: none;
+  box-shadow: none;
+}
+
+.question-text {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.options-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.option-button {
+  padding: 1rem;
+  text-align: left;
+  background-color: var(--white);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.option-button:hover {
+  border-color: var(--accent-color);
+  background-color: var(--primary-color);
+}
+
+.survey-card textarea.form-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+}
+
+.survey-card textarea.form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(192, 144, 176, 0.2);
+}
+
+.survey-card .submit-button {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.survey-card .submit-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.survey-card .submit-button:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+}
+
+/* Стили для формы контактов */
+.contact-form-container {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  padding: 2.5rem 0;
+  width: 100%;
+}
+
+.contact-form-card {
+  max-width: 28rem;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.contact-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--secondary-text);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+}
+
+.form-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  color: var(--text-color);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(192, 144, 176, 0.2);
+}
+
+.form-input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.submit-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.submit-button:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.submit-button.submitting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Стили для индикатора загрузки */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--white);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Стили для страницы благодарности */
+.thank-you-container {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.thank-you-card {
+  max-width: 32rem;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  padding: 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.success-icon {
+  width: 5rem;
+  height: 5rem;
+  color: var(--accent-color);
+  margin: 0 auto 1.5rem;
+}
+
+.thank-you-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.thank-you-text {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-text);
+}
+
+.back-button {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.back-button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .landing-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .landing-content {
+    max-width: 100%;
+    padding: 1rem;
+    order: 2;
+    text-align: center;
+  }
+  
+  .landing-image {
+    width: 100%;
+    height: 40vh;
+    order: 1;
+    max-height: 350px;
+    margin: 0.5rem auto;
+    border-radius: 15px;
+  }
+  
+  .landing-image img {
+    object-position: top center;
+  }
+  
+  .bullet-points {
+    width: 100%;
+    max-width: 300px;
+    margin: 1.5rem auto;
+    align-items: flex-start;
+  }
+  
+  .bullet-point {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding-left: 1rem;
+  }
+  
+  .bullet-point span {
+    flex-shrink: 0;
+  }
+  
+  .bullet-point p {
+    text-align: left;
+    font-size: 1.125rem;
+  }
+  
+  .landing-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .landing-content h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .landing-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .landing-content > p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    margin: 0 auto;
+    padding: 0.875rem 2.5rem;
+    font-size: 1.125rem;
+  }
+  
+  .landing-footer {
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .footer-content {
+    padding: 0 1rem;
+  }
+  
+  .survey-card,
+  .contact-form-card,
+  .thank-you-card {
+    margin: 0 1rem;
+  }
+}
+
